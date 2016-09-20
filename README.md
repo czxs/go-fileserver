@@ -81,7 +81,7 @@
   "enable":true              //是否开启http模块
  }
 }
-##server 端需要安装rabbitmq
+## server 端需要安装rabbitmq
 #####mq 新建队列和exchange
 #####创建routingkey  
 ##运行：run
