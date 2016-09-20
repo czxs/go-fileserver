@@ -22,9 +22,9 @@
   配置：configure
   
   client 配置：
-  {
-     "debug":true,     //打开调试模式
-     "rabbitmq":{     //mq的配置
+ 	{
+  			"debug":true,     //打开调试模式
+   		"rabbitmq":{     //mq的配置
        "s_addr":"127.0.0.1:5672",  //地址和端口
        "user":"dev",  //用户
        "pass":"dev",  //密码
