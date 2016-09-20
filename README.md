@@ -1,27 +1,27 @@
 # go-fileserver
 ##目的：target
-###解决运维的大量小文件实时分发的问题
+####解决运维的大量小文件实时分发的问题
       
 ##原理：schematic 
-###1.提供http接口，前端上传文件的时候给http接口提供需要传递我文件名，文件相对路径，文件存储的基本路径
-###2.proxy接收到http请求的信息之后，传递给配置的rabbitmq队列
-###3.server端连接rabbitmq的server，读取消息，按照消息提供的路径和名称，将文件读取。
-###4.server初始化一批长连接和client进行通讯。
-###5.server将文件读取之后通过socket长连接，将文件传送给client。
-###6.client接收文件
+#####1.提供http接口，前端上传文件的时候给http接口提供需要传递我文件名，文件相对路径，文件存储的基本路径
+#####2.proxy接收到http请求的信息之后，传递给配置的rabbitmq队列
+#####3.server端连接rabbitmq的server，读取消息，按照消息提供的路径和名称，将文件读取。
+#####4.server初始化一批长连接和client进行通讯。
+#####5.server将文件读取之后通过socket长连接，将文件传送给client。
+#####6.client接收文件
 
     
 ##下一个版本的功能：next version
-###1.client端检查自己是不是叶子节点，如果不是，将传递的文件字节流写本地的同时也传给下一级叶子节点。
-###2.client也初始化并维护一个与各个叶子节点的连接池
+#####1.client端检查自己是不是叶子节点，如果不是，将传递的文件字节流写本地的同时也传给下一级叶子节点。
+#####2.client也初始化并维护一个与各个叶子节点的连接池
     
 ##安装：install 
-###go build 
-###./src 
+#####go build 
+#####./src 
     
 ##配置：configure
 
-###client 配置：
+#####client 配置：
 {
  "debug":true,     //打开调试模式
  "rabbitmq":{     //mq的配置
@@ -51,7 +51,7 @@
    "enable":false              //是否开启http模块
  }
 }
-###server 配置
+#####server 配置
 {
  "debug":true,     //打开调试模式
  "rabbitmq":{     //mq的配置
@@ -82,11 +82,11 @@
  }
 }
 ##server 端需要安装rabbitmq
-###mq 新建队列和exchange
-###创建routingkey  
+#####mq 新建队列和exchange
+#####创建routingkey  
 ##运行：run
-###client ./src
+#####client ./src
  
-###server ./src
+#####server ./src
     
     
