@@ -82,7 +82,7 @@
  }
 }
 ## server 端需要安装rabbitmq
-#####mq 新建队列和exchange
+#####mq 新建队列和exchange 
 #####创建routingkey  
 ##运行：run
 #####client ./src
