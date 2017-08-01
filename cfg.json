@@ -4,22 +4,19 @@
 		"s_addr":"127.0.0.1:5672",
 		"user":"dev",
 		"pass":"dev",
-		"enable":true,
-		"exchange":"test",
-		"queue":"hello",
-		"routing_key":"hello_test"
+		"enable":true
 	},
 	"reciver":{
 		"client":{
 			"agent":["127.0.0.1:55556"],
 			"enable":true,
-			"agent_process":50
+			"agent_process":5
 		},
 		"server":{
 			"enable":false,
-			"listen":":55556",
+			"listen":":55555",
 			"dirpath":"/data/static1",
-			"proxy":false
+			"proxy":true
 			
 		}
 	},
