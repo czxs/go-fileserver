@@ -21,7 +21,7 @@
     
 ## 配置：configure
 
-#####client 配置：
+client 配置：
     {
 		"debug":true,     //打开调试模式<br>
 		"rabbitmq":{     //mq的配置<br>
@@ -51,7 +51,7 @@
        		"enable":false              //是否开启http模块<br>
    		}<br>
     }<br>
-#####server 配置
+server 配置
     {
 		"debug":true,     ##打开调试模式<br>
 		"rabbitmq":{     ##mq的配置<br>
