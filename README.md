@@ -1,5 +1,7 @@
 # go-fileserver
+
 ##目的：target
+
 ####解决运维的大量小文件实时分发的问题
       
 ##原理：schematic 
@@ -15,13 +17,16 @@
 #####1.client端检查自己是不是叶子节点，如果不是，将传递的文件字节流写本地的同时也传给下一级叶子节点。
 #####2.client也初始化并维护一个与各个叶子节点的连接池
     
+    
 ##安装：install 
 #####go build 
 #####./src 
     
+    
 ## 配置：configure
 
-client 配置：
+client 配置：<br>
+
     {
 		"debug":true,     //打开调试模式<br>
 		"rabbitmq":{     //mq的配置<br>
@@ -51,7 +56,7 @@ client 配置：
        		"enable":false              //是否开启http模块<br>
    		}<br>
     }<br>
-server 配置
+server 配置<br>
     {
 		"debug":true,     ##打开调试模式<br>
 		"rabbitmq":{     ##mq的配置<br>
@@ -81,12 +86,14 @@ server 配置
 			"enable":true              ##是否开启http模块<br>
 		}<br>
     }<br>
-## server 端需要安装rabbitmq
-#####mq 新建队列和exchange 
-#####创建routingkey  
-##运行：run
-#####client ./src
+    
+## server 端需要安装rabbitmq<br>
+
+#### mq 新建队列和exchange <br>
+##### 创建routingkey  <br>
+## 运行：run<br>
+##### client ./src<br>
  
-#####server ./src
+##### server ./src<br>
     
     
