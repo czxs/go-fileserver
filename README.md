@@ -28,34 +28,34 @@
 client 配置：
 
     {
-		"debug":true,     //打开调试模式<br>
-		"rabbitmq":{     //mq的配置<br>
-	    	"s_addr":"127.0.0.1:5672",  //地址和端口<br>
-       	    "user":"dev",  //用户<br>
-       		"pass":"dev",  //密码<br>
-	        "enable":false,  //是否连接mq<br>
-       		"exchange":"test", //exchange的名字<br>
-       		"queue":"hello",  //队列的名字<br>
-       		"routing_key":"hello_test" //route_key<br>
+		"debug":true,     //打开调试模式
+		"rabbitmq":{     //mq的配置
+	    	"s_addr":"127.0.0.1:5672",  //地址和端口
+       	    "user":"dev",  //用户
+       		"pass":"dev",  //密码
+	        "enable":false,  //是否连接mq
+       		"exchange":"test", //exchange的名字
+       		"queue":"hello",  //队列的名字
+       		"routing_key":"hello_test" //route_key
    		},
-   		"reciver":{<br>
-       		"client":{  //接收文件端<br>
-           		"agent":["127.0.0.1:55556"],  //接收文件的地址，可以多个<br>
-	                "enable":false,                //是否开启发送文件模块<br>
-        	   	"agent_process":50            //初始化的长连接个数<br>
-       		},  <br>
-	       	"server":{                      //server 发送文件的地址<br>
-        		"enable":true,              //是否开启接收文件模块<br>
-           		"listen":":55556",           //接收文件模块监听的端口<br>
-	           	"dirpath":"/data/static1",   //文件保存的基本路径<br>
-        	   	"proxy":false              <br> //是否开启代理模式（功能没有开发完全，设想如果开启，就将文件从此节点转发给下一级子节点）<br>
-	       	}   <br>
-   		},<br>
-		"http":{<br>
- 	        "listen":"127.0.0.1:6082", //http代理监听的地址<br>
-       		"enable":false              //是否开启http模块<br>
-   		}<br>
-    }<br>
+   		"reciver":{
+       		"client":{  //接收文件端
+           		"agent":["127.0.0.1:55556"],  //接收文件的地址，可以多个
+	                "enable":false,                //是否开启发送文件模块
+        	   	"agent_process":50            //初始化的长连接个数
+       		},  
+	       	"server":{                      //server 发送文件的地址
+        		"enable":true,              //是否开启接收文件模块
+           		"listen":":55556",           //接收文件模块监听的端口
+	           	"dirpath":"/data/static1",   //文件保存的基本路径
+        	   	"proxy":false              <br> //是否开启代理模式（功能没有开发完全，设想如果开启，就将文件从此节点转发给下一级子节点）
+	       	}   
+   		},
+		"http":{
+ 	        "listen":"127.0.0.1:6082", //http代理监听的地址
+       		"enable":false              //是否开启http模块
+   		}
+    }
     
 server 配置:
 
